@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -22,6 +23,12 @@ module.exports = {
         from: path.join(__dirname, 'example', 'index.html'),
         to: path.join(__dirname, 'docs')
       }
-    ])
+    ]),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false
+      }
+    })
   ]
 };
