@@ -1,0 +1,49 @@
+{
+  "name": "@axetroy/react-download",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "dev": "rimraf lib && webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
+    "build": "rimraf lib && webpack --config webpack.config.prod.js --display-error-details --progress --colors",
+    "build:doc": "npm run build && rimraf docs && webpack --config webpack.config.doc.js --display-error-details --progress --colors",
+    "deploy": "gh-pages -d ./docs"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "download",
+    "react-download"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axetroy/react-download.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axetroy/react-download/issues"
+  },
+  "homepage": "https://github.com/axetroy/react-download#readme",
+  "peerDependencies": {
+    "react": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "gh-pages": "^1.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "rimraf": "^2.5.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
