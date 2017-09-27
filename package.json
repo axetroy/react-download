@@ -40,7 +40,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
     "gh-pages": "^1.0.0",
-    "react": "^15.5.4",
+    "react": "^16.0.0",
     "react-dom": "^15.5.4",
     "rimraf": "^2.5.0",
     "webpack": "^2.4.1",
