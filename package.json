@@ -23,27 +23,29 @@
     "type": "git",
     "url": "git+https://github.com/axetroy/react-download.git"
   },
-  "author": "",
+  "author": "Axetroy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/axetroy/react-download/issues"
   },
   "homepage": "https://github.com/axetroy/react-download#readme",
   "peerDependencies": {
-    "react": "^15.4.2"
+    "react": "^16.0.0",
+    "proptypes": "^1.1.0"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "copy-webpack-plugin": "^4.0.1",
-    "gh-pages": "^1.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^15.5.4",
-    "rimraf": "^2.5.0",
+    "copy-webpack-plugin": "^4.3.0",
+    "gh-pages": "^1.1.0",
+    "proptypes": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
     "webpack": "^3.7.0",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.9.7"
   }
 }
