@@ -1,23 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'proptypes';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Download extends Component {
-  static PropTypes = {
+  static propTypes = {
     file: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired
   };
 
-  state = {};
-
-  componentDidMount() {}
-
-  componentWillReceiveProps(nextProps) {}
-
   downloadFile(fileName, fileContent) {
     function fake_click(obj) {
-      let ev = document.createEvent('MouseEvents');
+      let ev = document.createEvent("MouseEvents");
       ev.initMouseEvent(
-        'click',
+        "click",
         true,
         false,
         window,
@@ -39,8 +33,8 @@ export default class Download extends Component {
       let urlObject = window.URL || window.webkitURL || window;
       let export_blob = new Blob([data]);
       let save_link = document.createElementNS(
-        'http://www.w3.org/1999/xhtml',
-        'a'
+        "http://www.w3.org/1999/xhtml",
+        "a"
       );
       save_link.href = urlObject.createObjectURL(export_blob);
       save_link.download = name;
@@ -55,7 +49,7 @@ export default class Download extends Component {
     return (
       <div
         className={
-          'react-download-container' + (className ? ' ' + className : '')
+          "react-download-container" + (className ? " " + className : "")
         }
         onClick={() => this.downloadFile(file, content)}
         style={style}
