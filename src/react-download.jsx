@@ -32,13 +32,20 @@ export default class Download extends Component {
     function export_raw(name, data) {
       let urlObject = window.URL || window.webkitURL || window;
       let export_blob = new Blob([data]);
-      let save_link = document.createElementNS(
-        "http://www.w3.org/1999/xhtml",
-        "a"
-      );
-      save_link.href = urlObject.createObjectURL(export_blob);
-      save_link.download = name;
-      fake_click(save_link);
+
+      if ('download' in HTMLAnchorElement.prototype) {
+        let save_link = document.createElementNS(
+          "http://www.w3.org/1999/xhtml",
+          "a"
+        );
+        save_link.href = urlObject.createObjectURL(export_blob);
+        save_link.download = name;
+        fake_click(save_link);
+      } else if ('msSaveBlob' in navigator) {
+        navigator.msSaveBlob(export_blob, name);
+      } else {
+        throw new Error("Neither a[download] nor msSaveBlob is available");
+      }
     }
     export_raw(fileName, fileContent);
   }
