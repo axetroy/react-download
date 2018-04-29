@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/react-download.svg)](https://greenkeeper.io/)
 
-react component for click and then download then specify content file.
+react component for click and then download the specify content file.
 
 [Online Demo](https://axetroy.github.io/react-download/)
 
